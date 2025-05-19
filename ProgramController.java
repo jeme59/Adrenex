@@ -28,7 +28,7 @@ public class ProgramController {
         scheduleContainer.getChildren().clear();
         for (int i = 0; i < schedule.length; i++) {
             Label dayLabel = new Label("Day " + (i + 1) + ": " + schedule[i]);
-            dayLabel.setStyle("-fx-font-size: 16px;");
+            dayLabel.setStyle("-fx-font-size: 20px;");
             scheduleContainer.getChildren().add(dayLabel);
         }
     }
@@ -56,5 +56,11 @@ public class ProgramController {
     protected void onLogout() {
         Main.currentUser = null; // Clear the session
         Main.loadScene("login.fxml", "Login"); // Redirect to login screen
+    }
+
+    // Called when the user clicks the "Show Videos" button
+    @FXML
+    protected void onShowVideosClicked() {
+        Main.loadScene("videos.fxml", "Workout Videos");
     }
 }
