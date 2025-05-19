@@ -24,7 +24,7 @@ public class Main extends Application {
         try {
             // Load the requested FXML file
             FXMLLoader loader = new FXMLLoader(Main.class.getResource(fxml));
-            Scene scene = new Scene(loader.load(), 400, 600);  // Set scene size (w x h)
+            Scene scene = new Scene(loader.load(), 840, 600);  // Set scene size (w x h)
 
             // Add common stylesheet to apply CSS styles
             scene.getStylesheets().add(Main.class.getResource("style.css").toExternalForm());
